@@ -1,0 +1,181 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+@media (min-width : 992px) {
+  .offcanvas {
+    visibility: visible;
+    position: relative;
+    background: none;
+    border: none;
+    justify-content: end;
+    color: rgb(2, 2, 2);
+  }
+
+}
+
+@media (max-width : 992px) {
+  .offcanvas {
+    width: 80% !important;
+  }
+
+  .offcanvas-start-lg {
+    top: 0;
+    left: 0;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    transform: translateX(-100%);
+  }
+
+  .navbar-nav li a {
+    border-bottom: 1px solid #171151;
+    cursor: pointer;
+  }
+
+  .navbar-nav .item-button {
+    align-self: center;
+  }
+
+  .item-button a {
+    width: 100%;
+    height: 47px;
+    background-color: #fefefe;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: #171151;
+    letter-spacing: 2px;
+    transition: all .5s ease;
+    margin-top: 14px;
+  }
+
+  .item-button a:hover {
+    background-color: #171151;
+    color: #fefefe;
+  }
+
+  .navbar-main {
+    padding: 0 0px !important;
+  }
+}
+
+.navbar-nav li a {
+  cursor: pointer;
+  font: normal normal bold 16px/19px Roboto;
+  letter-spacing: 0px;
+  color: #171151;
+  padding: 22px;
+}
+
+.navbar-nav li a:active {
+  color: #4348BD;
+}
+
+.navbar-nav li a:hover {
+  color: #4348BD;
+  border-bottom: 3px solid #4348BD;
+}
+
+.navbar-nav .item-button {
+  align-self: center;
+}
+
+.item-button a {
+  background-color: #171151;
+  width: 150px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff !important;
+  transition: all .5s ease;
+}
+
+.item-button a:hover {
+  background-color: #171151;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+a:hover {
+  color: currentColor;
+}
+
+.header {
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+  display: flex;
+  align-items: center;
+  // margin-top: 29px;
+  position: absolute;
+}
+
+.offcanvas-body {
+  justify-content: end;
+}
+
+.navbar-main {
+  width: 100%;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media(max-width:992px) {
+
+  .navbar-toggler {
+    justify-content: end;
+  }
+}
+
+.navb-logo img {
+  top: 39px;
+  left: 92px;
+  width: 239px;
+  height: 79px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/*Sticky Header Styles*/
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.header.sticky {
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 25%);
+}
+
+
+.modal-backdrop {
+  position: absolute;
+}
+
+@media (min-width: 992px) and (max-width: 1266px) {
+  .navbar-main {
+    padding: 0px;
+  }
+
+  .navbar-nav li a {
+    padding: 6px;
+  }
+}
+
+@media(max-width:375px) {
+  .navb-logo img {
+    width: 200px;
+    height: 66px;
+  }
+}

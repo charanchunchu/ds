@@ -1,0 +1,91 @@
+<div class="container p-4 plant-popup">
+  <div class="text-end close" (click)="close()"> <mat-icon>close</mat-icon></div>
+  <div class="panel-body inf-content">
+    <div class="row">
+      <div class="col-md-4">
+        <img alt="" title="" class="img-circle img-thumbnail isTooltip"
+             [src]="data.img" alt="{{ data['botanical-name'] }}"
+             data-original-title="Information">
+      </div>
+      <div class="col-md-8">
+        <strong class="inf-title">{{ data['botanical-name'] }}</strong><br>
+        <div class="table-responsive mt-4">
+          <table class="table table-user-information">
+            <tbody>
+              <tr>
+                <td>
+                  <strong>
+                    Botanical Name:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data['botanical-name'] }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Family Name:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data['family-name'] }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Common Name:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data['common-name'] }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Part Used:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data['part-used'] }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Habitat:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data.habitat }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Product Offered:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data['product-offered'] }}
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>
+                    Uses:
+                  </strong>
+                </td>
+                <td class="text-primary">
+                  {{ data.uses }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

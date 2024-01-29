@@ -1,0 +1,252 @@
+<div class="container-fluid ">
+  <div class="row dashboard-banner-text">
+    <div class="privacy-banner p-0">
+      <div class="privacy-color">
+        <p class="privacy-text text-end">Plants Specimens</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Review carosel section -->
+<div class="container-fluid p-0">
+  <div class="carosel-banner">
+    <div class="pt-5 pb-5">
+      <div #slider class="slider">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="reviews-line"><span class="lines"></span>Our Herbs</div>
+              <h3 class="mb-5 Client-review mt-3">Popular Herbs</h3>
+            </div>
+            <div class="col-md-6">
+              <div class="slider text-right" data-slider>
+                <div class="slider-title">
+                  <div class="col  button-area">
+                    <a class="btn reviews-arrow-buttons mb-3 mr-1 hide-arrow" role="button" data-slide="prev"
+                      data-slider-prev>
+                      <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="btn reviews-arrow-buttons mb-3 hide-arrow" role="button" data-slide="next"
+                      data-slider-next>
+                      <i class="fa fa-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid nav-icons-container">
+            <div class="nav-icons-wrap CenterIconBox">
+              <ul class="nav-icons-wrap CenterIconBox slider__track" data-slider-track>
+                <li *ngFor="let item of navItems">
+                  <a (click)="openPopup(item)">
+                    <div class="Nav-icons Flights">
+                      <img [src]="item.img" alt="{{ item['botanical-name'] }}">
+                    </div>
+                    <span class="nav-icon-p">{{ item['botanical-name'] }}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid mt-5 specimens-plants">
+  <div class="container">
+    <!-- check section -->
+    <div class="service-line about-us-line"><span class="line"></span>Our Plants</div>
+    <h1 class="about-us-heading">Plants Specimens</h1>
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="../../assets/front-view-growing-plants.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 312.svg">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">Hemoglobin Test</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="../../assets/various-flowers-plant-leaves-petri-dishes-microscope.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 313.svg">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">General Analysis</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img
+            src="../../assets/botanist-researcher-woman-examining-green-sapling-observing-genetic-mutation-analyzing-organic-plants-agriculture-experiment-chemist-working-biological-pharmaceutical-laboratory-1.jpg"
+            class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 314.svg">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">Biochemistry</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="../../assets/chemical-laboratory-during-test-pesticides-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 316.svg">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">Microbiology</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="../../assets/side-view-woman-experiment-sprout (2).jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 266.png">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">Histopatolgy</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <img src="../../assets/couple-propagating-their-houseplants-as-hobby-together.jpg" class="card-img-top"
+            alt="...">
+          <div class="card-body">
+            <div class="d-flex">
+              <img class="img-fluid" alt="100%x280" src="../../assets/Group 315.svg">
+              <div class="">
+                <h5 class="Service-card-title mx-3 my-2">Genetics</h5>
+                <p class="Service-card-more mx-3">READ MORE</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Gallery card section -->
+<div class="container-fluid p-0">
+  <div class="banner-color">
+    <div class="row">
+      <div class="col">
+        <div id="card-area">
+          <div class="wrapper">
+            <div class="box-area">
+              <div class="box">
+                <img alt="" src="../../assets/close-up-scientist-with-plant.jpg" class="image-fluid">
+                <div class="overlay">
+                  <div class="hover-img"> <img src="../../assets/Group 317@2x.png" alt=""></div>
+                  <p class="end-title">HIGH QUALITY<br>SERVICES</p>
+                  <p class="card-para">
+                    Nam eget dul vel quam sodales<br>semper quis porttitor tortor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div id="card-area">
+          <div class="wrapper">
+            <div class="box-area">
+              <div class="box">
+                <img alt="" src="../../assets/Group 318.jpg" class="image-fluid">
+                <div class="overlay">
+                  <div class="hover-img"> <img src="../../assets/Group 321@2x.png" alt=""></div>
+                  <p class="end-title">FAST WORKING<br>PROCESS</p>
+                  <p class="card-para">
+                    Nam eget dul vel quam sodales<br>semper quis porttitor tortor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div id="card-area">
+          <div class="wrapper">
+            <div class="box-area">
+              <div class="box">
+                <img alt="" src="../../assets/Group 319.jpg" class="image-fluid">
+                <div class="overlay">
+                  <div class="hover-img"> <img src="../../assets/Group 322@2x.png" alt=""></div>
+                  <p class="end-title">24/7 CUSTOMER <br> SUPPORT</p>
+                  <p class="card-para">
+                    Nam eget dul vel quam sodales<br>semper quis porttitor tortor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div id="card-area">
+          <div class="wrapper">
+            <div class="box-area">
+              <div class="box">
+                <img alt="" src="../../assets/Group 320.jpg" class="image-fluid">
+                <div class="overlay">
+                  <div class="hover-img"> <img src="../../assets/Group 323@2x.png" alt=""></div>
+                  <p class="end-title">WE HAVE <br> EXPECT TEAM</p>
+                  <p class="card-para">
+                    Nam eget dul vel quam sodales<br>semper quis porttitor tortor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Business Technology -->
+<div class="container-fluid mb-5 business">
+  <div class="container mt-5">
+    <h1 class="main-heading">What is A Business Technology Roadmap?</h1>
+    <p class="about-us-parg">Unlike detailed blueprints that lay out all tasks, deadlines, bug reports, and more
+      along the way, technology roadmaps
+      are high-level visual summaries highlighting a company’s vision or plans. </p>
+    <p class="about-us-parg"> In an Agile approach, a technology roadmap feeds the sprint and grooming processes,
+      providing insight into how the
+      product will travel from start to finish. It makes it easier for development teams to: </p>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <img src="../../assets/high-angle-plants-brown-pots.jpg" alt="">
+      </div>
+      <div class="col-md-6 mb-3">
+        <img src="../../assets/science-laboratory-test-tubes-laboratory-equipment-ai-generated.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</div>

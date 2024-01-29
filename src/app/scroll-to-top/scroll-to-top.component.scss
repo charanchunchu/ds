@@ -1,0 +1,29 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  opacity: 0;
+  transition: all .2s ease-in-out;
+}
+button.btn:active, button.btn {
+    right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #4348BD ;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  color:#ffffff;
+  border:none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 16px;
+}
+.show-scrollTop {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+}
+.material-icons
+{
+  margin-top: 4px;
+}

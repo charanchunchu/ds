@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg header" [ngClass]="{'sticky': sticky}">
+  <div class="container-fluid navbar-main">
+    <div class="navb-logo" routerLink="/">
+      <img src="../../assets/logo-normal@2x.png" alt="Logo">
+    </div>
+    <button class="btn navbar-toggler border-3 px-2" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="offcanvas offcanvas-start-lg" tabindex="-1" id="offcanvasExample"
+      aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header d-flex d-lg-none">
+        <div class="navb-logo" routerLink="/">
+          <img src="../../assets/logo-normal@2x.png" alt="Logo">
+        </div>
+        <a href="javascript:void(0) " class="text-reset p-0" data-bs-dismiss="offcanvas" aria-label="close">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#171151;" class="bi bi-x-circle"
+            viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </a>
+      </div>
+      <div class="offcanvas-body p-lg-0">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/about-us">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/human-biospecimens">Human Biospecimens</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/plant-specimens">Plants Specimens</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/services">Services</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/contact-us">Contact Us</a>
+          </li>
+          <li class="nav-item item-button">
+            <a class="nav-link active " aria-current="page" type="button"  href="mailto:info@ziolaresearch.com">INFO MAIL.ID</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

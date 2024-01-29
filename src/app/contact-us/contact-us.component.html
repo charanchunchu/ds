@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row dashboard-banner-text">
+    <div class="privacy-banner p-0">
+      <div class="privacy-color">
+        <p class="privacy-text text-end">Contact US</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid p-0 message-info">
+  <div class="container">
+    <div class="row address-section">
+      <div class="col-md-4 address-line-section">
+        <div class="address-line">
+          <img src="../../assets/Group 299.svg" alt="" class="address-img">
+          <p class="address">Address line</p>
+          <p class="address-para">950, 23rd Cross Rd, M.C.E.C.H.S. Layout 1st Phase, Sampigehalli, Bengaluru, Karnataka 560077</p>
+        </div>
+        <div class="phone-number">
+          <img src="../../assets/Group 298.svg" alt="" class="address-img">
+          <p class="number">Phone Number</p>
+          <p class="number-text">+91 7993035079</p>
+          <p class="number-text-second">+91 9611078686</p>
+        </div>
+        <div class="opening-hours">
+          <img src="../../assets/Group 249.svg" alt="" class="address-img">
+          <p class="hours">Opening Hours</p>
+          <p class="hurs-day">Monday - Friday</p>
+          <p class="hurs-time">10:00 AM - 07:00 PM</p>
+        </div>
+      </div>
+      <div class="col-md-8 mt-4 message-section">
+        <div class="message-form">
+          <div class="container">
+            <h4 class="form-title">Send us a Message :</h4>
+            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+              <div class="row mt-5">
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" formControlName="name" id="floatingTextInput1" placeholder="John">
+                    <label for="floatingTextInput1">Enter Your Name</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('name')?.touched && registrationForm.get('name')?.hasError('required')" >
+                    Name is required.
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingTextInput2" formControlName="email" placeholder="Research@gmail.com" aria-describedby="validationServer05Feedback" required>
+                    <label for="floatingTextInput2">Enter Your Email</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('email')?.touched && registrationForm.get('email')?.hasError('required')">
+                    Email is required.
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingTextInput2" formControlName="phone" placeholder="1230456789" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" (input)="onPhoneInput($event)">
+                    <label for="floatingTextInput2">Enter Your Number</label>
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('phone')?.touched && registrationForm.get('phone')?.hasError('required')">
+                    Phone number is required.
+                  </div>
+                  <div class="validate" *ngIf="registrationForm.get('phone')?.hasError('pattern')">
+                    Please enter a valid 10-digit phone number.
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="floatingTextInput2" placeholder="Smith">
+                    <label for="floatingTextInput2">Subject</label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control" formControlName="description" id="exampleFormControlTextarea1" placeholder="Type Your Message"
+                    rows="6"></textarea>
+                </div>
+                <div class="validate" *ngIf="registrationForm.get('description')?.touched && registrationForm.get('description')?.hasError('required')">
+                  Description is required.
+                </div>
+              </div>
+              <!-- <button class="btn search-button" type="submit">SEND MESSAGE</button> -->
+              <button class="btn search-button" type="submit" >SEND MESSAGE</button>
+            </form>
+          </div>
+        </div>
+        <div class="map mt-5">
+          <div class="responsive-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4440419350753!2d77.61819947484327!3d13.07102058725356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19d425de1f89%3A0x35237dc176981040!2sZIOLA%20RESEARCH%20PVT%20LTD!5e0!3m2!1sen!2sin!4v1705468242863!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

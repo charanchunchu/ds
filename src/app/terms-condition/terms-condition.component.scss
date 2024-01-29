@@ -1,0 +1,117 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.privacy-banner {
+  background-image: url("../../assets/Group\ 324.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.privacy-color {
+  margin-top: 25vh;
+  width: 30%;
+  background: #4348BD 0% 0% no-repeat padding-box;
+  border-radius: 0px 91px 91px 0px;
+  opacity: 1;
+  padding: 10px;
+  padding-left: 10%;
+}
+
+.privacy-text {
+  font: normal normal bold 60px/72px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-size: 48px;
+  margin-right: 32px;
+}
+
+.about-us-heading {
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: left;
+  margin-top: 66px;
+  margin-bottom: 45px;
+}
+
+.about-us-pargraph {
+  color: #171151;
+  font-size: 16px;
+}
+
+.banner-color {
+  // background-color: #F2F5FA;
+  justify-content: center;
+  // padding: 30px;
+}
+
+.address-title {
+  color: #171151;
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+}
+
+.contact-sub-title {
+  color: #171151;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.search-button {
+  width: 215px;
+  height: 66px;
+  background: #0E63FF 0% 0% no-repeat padding-box;
+  opacity: 1;
+  color: #ffffff;
+}
+
+.service-line {
+  display: inline-flex;
+  color: #0E63FF;
+}
+
+.line {
+  width: 35px;
+  height: 2px;
+  background-color: #0E63FF;
+  display: flex;
+  margin: 12px 10px 1px 1px;
+}
+
+img {
+  width: -webkit-fill-available;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .image-section-2 {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .privacy-color {
+    width: 68%;
+  }
+}
+.about-check-icon {
+  margin-right: 10px;
+}
+.about-us-parg{
+  margin-bottom: 42px;
+}
+.approach{
+  margin-top: 72px;
+  margin-bottom: 60px;
+}
+.about-us-approach{
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: left;
+  margin-top: 14px;
+  margin-bottom: 45px;
+}

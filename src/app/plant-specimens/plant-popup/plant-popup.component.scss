@@ -1,0 +1,27 @@
+.employ{
+text-align: center;
+}
+.inf-content{
+-webkit-border-radius:10px;
+-moz-border-radius:10px;
+border-radius:10px;
+}
+.inf-title{
+color: #A72037;
+font-size: 18px;
+}
+.close{
+cursor: pointer;
+}
+strong{
+white-space: nowrap;
+}
+
+@media (min-width:770px){
+.img-circle{
+width:600px;
+}}
+@media (max-width:770px){
+.plant-popup{
+height: 550px;
+}}

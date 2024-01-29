@@ -1,0 +1,67 @@
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+.privacy-banner {
+  background-image: url("../../assets/Group\ 325.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+}
+
+.privacy-color {
+  margin-top: 25vh;
+  width: 40%;
+  background: #4348BD 0% 0% no-repeat padding-box;
+  border-radius: 0px 91px 91px 0px;
+  opacity: 1;
+  padding: 10px;
+  padding-left: 10%;
+}
+
+.privacy-text {
+  font: normal normal bold 60px/72px Roboto;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+  font-size: 48px;
+  margin-right: 32px;
+}
+
+.about-us-heading {
+  font-weight: 700;
+  color: #171151;
+  font-size: 40px;
+  text-align: left;
+}
+
+.about-us-pargraph {
+  color: #171151;
+  font-size: 16px;
+}
+
+img {
+  width: -webkit-fill-available;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .image-section-2 {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .privacy-color {
+    width: 68%;
+  }
+}
+.about-check-icon {
+  margin-right: 10px;
+}
+.about-us-heading{
+  margin-top: 102px;
+  margin-bottom: 45px;
+}
+.about-us-parg{
+  margin-bottom: 42px;
+}
