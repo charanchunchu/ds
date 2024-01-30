@@ -87,14 +87,14 @@ export class PlantSpecimensComponent implements AfterViewInit {
   openPopup(item: any): void {
     this.dialog.open(PlantPopupComponent, {
       data: {
-        title: `Plant ${item.id}: ${item['botanical-name']}`,
+        title: `Plant ${item.id}: ${item['plant-botanical-name']}`,
         content: `Description: ${item.description}`,
         img: item.img,
-        'botanical-name': item['botanical-name'],
-        'family-name': item['family-name'],
-        'common-name': item['common-name'],
-        'part-used': item['part-used'],
-        habitat: item['habitat'],
+        'plant-botanical-name': item['plant-botanical-name'],
+        'plant-family-name': item['plant-family-name'],
+        'plant-common-names': item['plant-common-names'],
+        'plant-parts-used': item['plant-parts-used'],
+        predominantly: item['predominantly'],
         'product-offered': item['product-offered'],
         uses: item['uses'],
       },

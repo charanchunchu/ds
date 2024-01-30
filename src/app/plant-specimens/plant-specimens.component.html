@@ -41,9 +41,9 @@
                 <li *ngFor="let item of navItems">
                   <a (click)="openPopup(item)">
                     <div class="Nav-icons Flights">
-                      <img [src]="item.img" alt="{{ item['botanical-name'] }}">
+                      <img [src]="item.img" alt="{{ item['plant-botanical-name'] }}">
                     </div>
-                    <span class="nav-icon-p">{{ item['botanical-name'] }}</span>
+                    <span class="nav-icon-p">{{ item['plant-botanical-name'] }}</span>
                   </a>
                 </li>
               </ul>
