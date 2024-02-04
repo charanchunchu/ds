@@ -249,6 +249,10 @@
 .carosel-banner {
   background-color: #F2F5FA;
 }
+.carosel-banner-herbs {
+  background-color: #ffffff;
+}
+
 
 .reviews-line {
   display: inline-flex;
@@ -517,4 +521,10 @@ ul.nav-icons-wrap li a span {
   color: #171151;
   font-size: 16px;
   margin: 12px;
+}
+@media (max-width:590px){
+  .privacy-text{
+    font-size: 36px !important;
+    font: normal normal bold 60px/40px Roboto;
+  }
 }
