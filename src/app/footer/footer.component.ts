@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +9,15 @@ import { Component } from '@angular/core';
 export class FooterComponent {
   currentYear: number;
 
-  constructor() {
+  constructor(public router: Router) {
     this.currentYear = new Date().getFullYear();
+  }
+  Privacy() {
+    this.router.navigate(['/privacy-policy']);
+    window.scrollTo(0, 1);
+  }
+  terms(){
+    this.router.navigate(['/terms-condition']);
+    window.scrollTo(0, 1);
   }
 }
