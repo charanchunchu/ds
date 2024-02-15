@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { PlantPopupComponent } from './plant-popup/plant-popup.component';
 import { NavIconsService } from '../services/nav-icons.service';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,9 +10,10 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class PlantSpecimensComponent implements AfterViewInit {
   navItems: any[] = [];
-  @ViewChild('slider', { static: true }) slider!: ElementRef<HTMLDivElement>;
+  @ViewChildren('slider') sliders!: QueryList<ElementRef<HTMLDivElement>>;
 
-  private intervalId: any;
+  private intervalIds: any[] = [];
+
   constructor(private plantSpecimensService: NavIconsService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -22,29 +23,31 @@ export class PlantSpecimensComponent implements AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    const track = this.slider.nativeElement.querySelector("[data-slider-track]") as HTMLElement;
-    const prev = this.slider.nativeElement.querySelector("[data-slider-prev]") as HTMLElement;
-    const next = this.slider.nativeElement.querySelector("[data-slider-next]") as HTMLElement;
+    this.sliders.forEach((slider, index) => {
+      const track = slider.nativeElement.querySelector("[data-slider-track]") as HTMLElement;
+      const prev = slider.nativeElement.querySelector("[data-slider-prev]") as HTMLElement;
+      const next = slider.nativeElement.querySelector("[data-slider-next]") as HTMLElement;
 
-    if (track && prev && next) {
-      this.updateButtonVisibility(track, prev, next);
-
-      prev.addEventListener("click", () => {
-        clearInterval(this.intervalId);
-        this.scrollSlider(track, -1);
-      });
-
-      next.addEventListener("click", () => {
-        clearInterval(this.intervalId);
-        this.scrollSlider(track, 1);
-      });
-
-      track.addEventListener("scroll", () => {
+      if (track && prev && next) {
         this.updateButtonVisibility(track, prev, next);
-      });
-    }
 
-    this.intervalId = setInterval(() => this.scrollSlider(track, 1), 2000);
+        prev.addEventListener("click", () => {
+          clearInterval(this.intervalIds[index]);
+          this.scrollSlider(track, -1);
+        });
+
+        next.addEventListener("click", () => {
+          clearInterval(this.intervalIds[index]);
+          this.scrollSlider(track, 1);
+        });
+
+        track.addEventListener("scroll", () => {
+          this.updateButtonVisibility(track, prev, next);
+        });
+
+        this.intervalIds[index] = setInterval(() => this.scrollSlider(track, 1), 2000);
+      }
+    });
   }
 
   private scrollSlider(track: HTMLElement, direction: number): void {
@@ -84,6 +87,7 @@ export class PlantSpecimensComponent implements AfterViewInit {
       next?.classList.remove('hide-arrow');
     }
   }
+
   openPopup(item: any): void {
     this.dialog.open(PlantPopupComponent, {
       data: {
