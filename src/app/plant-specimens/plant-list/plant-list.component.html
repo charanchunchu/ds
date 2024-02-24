@@ -1,0 +1,46 @@
+<div class="container-fluid p-0" *ngFor="let section of sections">
+    <div class="carosel-banner" *ngIf="sectionDataMap[section] | async as sectionData">
+      <div class="pt-5 pb-5">
+        <div #slider class="slider">
+          <div class="container">
+            <h3 class="mb-5 Client-review mt-3">Herbs based on their parts:{{ section }}</h3>
+            <p class="about-us-pargraph ">We provide a diverse selection of various components of the herb based on their usefulness and popularity. Each component undergoes processing and refinement to meet our high standards of quality.</p>
+            <div class="row">
+              <div class="col-md-6">
+              </div>
+              <div class="col-md-6">
+                <div class="slider text-right" data-slider>
+                  <div class="slider-title">
+                    <div class="col  button-area">
+                      <a class="btn reviews-arrow-buttons mb-3 mr-1 hide-arrow" role="button" data-slide="prev"
+                        data-slider-prev>
+                        <i class="fa fa-arrow-left"></i>
+                      </a>
+                      <a class="btn reviews-arrow-buttons mb-3 hide-arrow" role="button" data-slide="next"
+                        data-slider-next>
+                        <i class="fa fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid nav-icons-container">
+              <div class="nav-icons-wrap CenterIconBox" #slider>
+                <ul class="nav-icons-wrap CenterIconBox slider__track" data-slider-track>
+                  <li *ngFor="let item of sectionData">
+                    <a (click)="openPopup(item)">
+                      <div class="Nav-icons Flights">
+                        <img [src]="item.img" alt="{{ item['plant-botanical-name'] }}">
+                      </div>
+                      <span class="nav-icon-p">{{ item['plant-botanical-name'] }}</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -23,6 +23,7 @@ import { MaterialModule } from './shared/material/material.module';
 import { SharedModule } from './shared/shared.module';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
+import { PlantListComponent } from './plant-specimens/plant-list/plant-list.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -43,6 +44,7 @@ import { WhatsappComponent } from './whatsapp/whatsapp.component';
     PlantPopupComponent,
     ScrollToTopComponent,
     WhatsappComponent,
+    PlantListComponent,
   ],
   imports: [
     BrowserModule,
