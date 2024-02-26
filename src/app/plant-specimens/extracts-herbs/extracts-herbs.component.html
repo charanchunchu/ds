@@ -1,0 +1,44 @@
+<div class="container-fluid p-0">
+    <div *ngFor="let keyValuePair of navItems | keyvalue; let i = index"
+    [ngClass]="{'first-background': i % 2 === 0, 'second-background': i % 2 !== 0}">
+    <div class="container">
+      <h2>{{ keyValuePair.key }}</h2>
+      <div *ngFor="let item of keyValuePair.value">
+        <h2 class="mt-4">{{ item.name }}</h2>
+        <p *ngIf="hasField(item, 'Common Name')"><strong>Common Name:</strong> {{ item['Common Name'] }}</p>
+        <p *ngIf="hasField(item, 'Active ingredient')"><strong>Active Ingredient:</strong> {{ item['Active ingredient'] }}</p>
+        <p *ngIf="hasField(item, 'Chemical Constituents and components')">
+          <strong>Chemical Constituents and Components:</strong> {{ item['Chemical Constituents and components'] }}
+        </p>
+        <div *ngIf="hasField(item, 'Action')">
+          <p><strong>Action:</strong></p>
+          <ng-container *ngIf="isArrayAction(item.Action)">
+            <ul>
+              <li *ngFor="let action of item.Action">{{ action }}</li>
+            </ul>
+          </ng-container>
+          <ng-container *ngIf="isObjectAction(item.Action)">
+            <ul>
+              <span *ngFor="let actionKey of getObjectKeys(item.Action)">
+                <h3 class="actions-sub-heading">{{ actionKey }}:</h3>
+                <li *ngFor="let line of item.Action[actionKey].split('\n')">{{ line }}<br></li>
+              </span>
+            </ul>
+          </ng-container>
+          <ng-container *ngIf="isStringAction(item.Action)">
+            <p *ngFor="let line of item.Action.split('\n')">{{ line }}</p>
+          </ng-container>
+        </div>
+        <div *ngIf="hasField(item, 'Curing Diseases')">
+          <p><strong>Curing Diseases:</strong></p>
+          <ul>
+            <li *ngFor="let disease of item['Curing Diseases'].split('\n')">{{ disease }}</li>
+          </ul>
+        </div>
+        <p *ngIf="hasField(item, 'Research Information')"><strong>Research Information:</strong> {{ item['Research Information'] }}</p>
+        <p *ngIf="hasField(item, 'Possible Combinations')"><strong>Possible Combinations:</strong> {{ item['Possible Combinations'] }}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+  

@@ -8,9 +8,8 @@ import { Observable, map } from 'rxjs';
 export class NavIconsService {
   private jsonUrl = '../../assets/json/plant-specimens.json';
   private plantlist = '../../assets/json/initial-plants.json';
-
+  private plantherbs = '../../assets/json/extracts-herbs-plants.json';
   constructor(private http: HttpClient) { }
-
   getPlantSpecimens(): Observable<any[]> {
     return this.http.get<any[]>(this.jsonUrl);
   }
@@ -19,12 +18,14 @@ export class NavIconsService {
       map(data => Object.keys(data))
     );
   }
-
   getInitialSection(section: string): Observable<any[]> {
     return this.http.get<any>(this.plantlist).pipe(
       map((data: any) => {
         return data[section] || [];
       })
     );
+  }
+  extractsherbs(): Observable<any[]> {
+    return this.http.get<any[]>(this.plantherbs);
   }
 }

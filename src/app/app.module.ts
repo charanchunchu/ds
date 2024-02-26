@@ -24,6 +24,7 @@ import { SharedModule } from './shared/shared.module';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { WhatsappComponent } from './whatsapp/whatsapp.component';
 import { PlantListComponent } from './plant-specimens/plant-list/plant-list.component';
+import { ExtractsHerbsComponent } from './plant-specimens/extracts-herbs/extracts-herbs.component';
 // import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { PlantListComponent } from './plant-specimens/plant-list/plant-list.comp
     ScrollToTopComponent,
     WhatsappComponent,
     PlantListComponent,
+    ExtractsHerbsComponent,
   ],
   imports: [
     BrowserModule,
