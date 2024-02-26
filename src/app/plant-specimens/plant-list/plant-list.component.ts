@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./plant-list.component.scss']
 })
 export class PlantListComponent {
+  @ViewChildren('imgList') imgLists!: QueryList<ElementRef>;
   sections: string[] = [];
   sectionDataMap: { [key: string]: Observable<any[]> } = {};
   @ViewChildren('slider') sliders!: QueryList<ElementRef<HTMLDivElement>>;
@@ -25,13 +26,17 @@ export class PlantListComponent {
       });
     });
   }
-  scrollSlider(section: string, direction: number): void {
-    const sliderElement = document.querySelector(`#${section} .slider__track`);
-    if (sliderElement) {
-      const scrollAmount = direction * 300;
-      sliderElement.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
+
+  scrollRight(index: number): void {
+    const element = this.imgLists.toArray()[index].nativeElement;
+    element.scrollBy(750, 0);
   }
+  
+  scrollLeft(index: number): void {
+    const element = this.imgLists.toArray()[index].nativeElement;
+    element.scrollBy(-750, 0);
+  }
+  
   
   openPopup(item: any): void {
     this.dialog.open(PlantPopupComponent, {
